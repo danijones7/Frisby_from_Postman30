@@ -7,8 +7,8 @@ describe("d00", () => {
             .expect("status", 200)
             .expect("json", "data", { payload: "hello world" })
 
-            .then((result) => {
-                console.log(result.json);
-            });
+        // .then((result) => {
+        //     console.log(result.json);
+        // });
     });
 });
