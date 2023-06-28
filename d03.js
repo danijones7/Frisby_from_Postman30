@@ -1,15 +1,15 @@
 const frisby = require("frisby");
 
-describe("Day 3", () => {
+describe("d03", () => {
     it("Check status and data", async function () {
         const echoResult = await frisby
             .post("https://postman-echo.com/post", {
-                data: "doodles",
+                animals: "sounds",
             })
             .expect("status", 200)
             .expect("json", "data", {
-                data: "doodles",
+                animals: "sounds",
             });
-        console.log(echoResult.json);
+        console.log(echoResult.json.data);
     });
 });

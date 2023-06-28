@@ -1,17 +1,20 @@
 const frisby = require('frisby');
 
-const baseurl = "https://postman-echo.com"
+const BASEURL = "https://postman-echo.com"
 describe("d02", () => {
-    it("Post raw text", async () => {
-        const result = await frisby.post(`${baseurl}/post`)
+    it("POST raw text", async function () {
+        const result = await frisby
+            .post(`${BASEURL}/post`)
             .expect("status", 200);
     });
 
-    it("Get with query params", async () => {
-        const params = new URLSearchParams({ number: 1, value: "start" });
+    it("GET with query params", async function () {
+        const params = new URLSearchParams({ cat: "meow", cow: "mooh" }); // как еще можно было бы добавить параметры ? 
         const result = await frisby
-            .get(`${baseurl}/get?${params}`)
+            .get(`${BASEURL}/get?${params}`)
             .expect("status", 200)
-            .expect("json", "args", { number: "1", value: "start" });
+            .expect("json", "args", { cat: "meow", cow: "mooh" });
+        console.log(result.json.args)
     });
+
 });

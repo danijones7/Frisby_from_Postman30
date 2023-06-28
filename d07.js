@@ -1,6 +1,6 @@
 const frisby = require("frisby");
 
-describe("Day 7", () => {
+describe("d07", () => {
     const params = new URLSearchParams({ count: 10, api_key: "DEMO_KEY" });
 
     it("Check status 200", function () {

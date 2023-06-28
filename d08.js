@@ -2,7 +2,7 @@ const frisby = require("frisby");
 const Joi = frisby.Joi;
 jest.setTimeout(150000);
 
-describe("Day 8", () => {
+describe("d08", () => {
     it("Check status 200", async function () {
         const result = frisby
             .get("https://randomuser.me/api")

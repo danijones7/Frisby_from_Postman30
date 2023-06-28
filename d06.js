@@ -1,19 +1,48 @@
-const frisby = require("frisby");
-const Joi = frisby.Joi;
+const frisby = require('frisby');
 
-describe("Day 6", () => {
-    it("Check response body", function () {
-        return frisby
-            .get("https://api.chucknorris.io/jokes/random")
-            .expect("status", 200)
-            .then((response) => {
-                console.log(response.json);
+frisby.globalSetup({
+    request: {
+        headers: {
+            'Accept': 'application/json',
+        },
+    },
+});
+
+// frisby.fetch('Get a random dad joke', "https://icanhazdadjoke.com/", {
+//     method: 'GET'
+// })
+//     .expect('status', 200)
+//     .expect('header', 'content-type', 'application/json')
+//     .expect('jsonTypes', {
+//         id: String,
+//         joke: String,
+//         status: Number,
+//     })
+//     .expect('json', {
+//         status: 200,
+//     })
+//     .expect('jsonTypes', 'joke', String)
+//     .then((response) => {
+//         console.log('Random Dad Joke:', response.json.joke);
+//     })
+//     .finally(() => {
+//         frisby.globalSetup({}); // Очищаем настройки после завершения теста
+//     });
+
+describe("d06", () => {
+    it("Gets the joke", async function () {
+        const result = await frisby
+            .get(`https://icanhazdadjoke.com/`)
+            .expect('status', 200)
+            .expect('header', 'content-type', 'application/json')
+            .expect('json', {
+                status: 200,
             })
-            .expect("jsonTypes", {
-                categories: Joi.array(),
-                icon_url: Joi.string().uri(),
-                url: Joi.string().uri(),
-                value: Joi.string(),
+            .then((response) => {
+                console.log('Random Dad Joke:', response.json.joke);
+            })
+            .finally(() => {
+                frisby.globalSetup({}); // Очищаем настройки после завершения теста
             });
     });
 });
