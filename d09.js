@@ -1,5 +1,5 @@
 const frisby = require("frisby");
-const Joi = frisby.Joi;
+// const Joi = frisby.Joi;
 
 describe("d09", () => {
     it("get random user", async function () {
@@ -19,6 +19,9 @@ describe("d09", () => {
             .expect("json", "json.name", userFullName)
             .expect("json", "json.email", user.email)
             .expect("json", "json.id", user.login.uuid)
+        console.log("json", "json.name", userFullName);
+        console.log("json", "json.email", user.email);
+        console.log("json", "json.id", user.login.uuid);
     });
 
 });

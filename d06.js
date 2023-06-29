@@ -8,26 +8,6 @@ frisby.globalSetup({
     },
 });
 
-// frisby.fetch('Get a random dad joke', "https://icanhazdadjoke.com/", {
-//     method: 'GET'
-// })
-//     .expect('status', 200)
-//     .expect('header', 'content-type', 'application/json')
-//     .expect('jsonTypes', {
-//         id: String,
-//         joke: String,
-//         status: Number,
-//     })
-//     .expect('json', {
-//         status: 200,
-//     })
-//     .expect('jsonTypes', 'joke', String)
-//     .then((response) => {
-//         console.log('Random Dad Joke:', response.json.joke);
-//     })
-//     .finally(() => {
-//         frisby.globalSetup({}); // Очищаем настройки после завершения теста
-//     });
 
 describe("d06", () => {
     it("Gets the joke", async function () {
