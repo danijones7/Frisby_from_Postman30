@@ -17,11 +17,10 @@ describe('d12', () => {
             })
             .get(`https://api.getpostman.com/collections/${COLLECTION_ID}`)
             .expect('status', 200)
-        console.log(json.collection.description)
             .get(`https://api.getpostman.com/environments/${ENVIRONMENT_ID}`)
             .expect('status', 200)
             .get(`https://api.getpostman.com/workspaces/${WORKSPACE_ID}`)
             .expect('status', 200)
-        // console.log(result.json.environment.id)
+        // console.log(result.json.environment.id) - не работает =(
     })
 })

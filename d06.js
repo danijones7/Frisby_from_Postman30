@@ -11,7 +11,7 @@ frisby.globalSetup({
 
 describe("d06", () => {
     it("Gets the joke", async function () {
-        const result = await frisby
+        const response = await frisby
             .get(`https://icanhazdadjoke.com/`)
             .expect('status', 200)
             .expect('header', 'content-type', 'application/json')
