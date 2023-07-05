@@ -1,3 +1,5 @@
+// ЕЩЕ РАЗ РАЗОБРАТЬСЯ В ДЕТАЛЯХ 
+
 const frisby = require('frisby');
 
 it('Get Pokemon Types', () => {

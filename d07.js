@@ -1,3 +1,5 @@
+// НЕ МОЕ РЕШЕНИЕ, ВЕРНУТЬСЯ ПОЗЖЕ К РАЗБОРУ 
+
 const frisby = require("frisby");
 
 jest.setTimeout(150000);
