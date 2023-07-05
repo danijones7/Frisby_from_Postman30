@@ -20,7 +20,6 @@ describe('d26', () => {
             }
             expect(linkArray).toBeInstanceOf(Array);
             const links = JSON.stringify(linkArray);
-            // const links = finalValue;
             console.log(links)
         });
 
