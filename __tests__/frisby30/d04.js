@@ -28,6 +28,6 @@ describe('d04', () => {
 
         })
     })
-    console.log(process.env.API_KEY)
+
 
 });
