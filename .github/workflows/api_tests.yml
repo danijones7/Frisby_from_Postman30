@@ -13,5 +13,9 @@ jobs:
           cache: npm
       - name: Npm Install
         run: npm ci
+      - name: Secret
+        run: echo "🎉  ${{ secrets.API_KEY }} secret"
       - name: Run Tests
         run: npm run test
+        env: 
+          API_KEY: ${{ secrets.API_KEY }}
