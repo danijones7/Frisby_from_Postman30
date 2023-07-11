@@ -5,7 +5,7 @@ const { API_KEY } = require('../properties');
 
 describe('d04', () => {
 
-    console.log(process.env.API_KEY)
+
     it('Authorization', async function () {
         const result = await frisby
             .setup({
