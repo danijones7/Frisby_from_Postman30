@@ -1,7 +1,7 @@
 
 module.exports = {
     API_KEY: process.env.API_KEY,
-    TOKEN: "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",
+    ACCESS_TOKEN: process.env.GITHUB_TOKEN,
     username: "German",
     password: "Sasisa"
 }

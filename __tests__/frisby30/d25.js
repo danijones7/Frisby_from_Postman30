@@ -1,5 +1,5 @@
 const frisby = require('frisby');
-hexColor = '47594a'
+const hexColor = '47594a'
 
 describe('d25', () => {
     it('Gets the full color by HEX', async function () {
