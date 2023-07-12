@@ -17,7 +17,7 @@ jobs:
       - name: Npm Install
         run: npm ci
       - name: Secret
-        run: api_key  ${{ secrets.API_KEY }} secret
+        run: echo  "${{ secrets.API_KEY }} secret"
       # - name: Token
       #   run: token ${{ secrets.ACCESS_TOKEN }} secret
       - name: Run Tests
