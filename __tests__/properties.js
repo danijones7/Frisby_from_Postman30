@@ -5,3 +5,13 @@ module.exports = {
     username: "German",
     password: "Sasisa"
 }
+
+
+const frisby = require('frisby')
+it('test just not to be empty', async function () {
+    await frisby
+        .get('https://www.google.com/')
+        .expect('status', 200)
+
+
+})
