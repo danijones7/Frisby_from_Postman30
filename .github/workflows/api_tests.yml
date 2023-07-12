@@ -23,7 +23,7 @@ jobs:
         run: npm ci
       - name: Secret
         run: echo "${{ secrets.API_KEY }} secret"
-      - name: Token
+      - name: Secret
         run: echo "${{ secrets.ACCESS_TOKEN }} secret"
       - name: Run Tests
         run: npm run test
