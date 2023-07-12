@@ -1,7 +1,5 @@
 const frisby = require('frisby');
 const Joi = frisby.Joi;
-
-
 const { ACCESS_TOKEN } = require('../properties');
 describe('d14', () => {
     it('Authorization', async function () {
