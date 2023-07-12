@@ -2,7 +2,7 @@ name: Api-Tests
 on: [push]
 env: 
   API_KEY: ${{ secrets.API_KEY }}
-  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  # ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 jobs:
   Test:
     runs-on: ubuntu-latest
@@ -18,8 +18,8 @@ jobs:
         run: npm ci
       - name: Secret
         run: api_key  ${{ secrets.API_KEY }} secret
-      - name: Token
-        run: token ${{ secrets.ACCESS_TOKEN }} secret
+      # - name: Token
+      #   run: token ${{ secrets.ACCESS_TOKEN }} secret
       - name: Run Tests
         run: npm run test
         
