@@ -16,9 +16,9 @@ jobs:
       - name: Secret
         run: api_key  ${{ secrets.API_KEY }} secret
       - name: Token
-        run: token ${{ secrets.GITHUB_TOKEN }} secret
+        run: token ${{ secrets.ACCESS_TOKEN }} secret
       - name: Run Tests
         run: npm run test
         env: 
           API_KEY: ${{ secrets.API_KEY }}
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
